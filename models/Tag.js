@@ -7,13 +7,13 @@ Tag.init(
   {
     // Define columns
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
+      type: DataTypes.INTEGER, //refers to the type of data which is ID
+      allowNull: false, //doesn't allow null
+      primaryKey: true, //identifier for each row in the table
       autoIncrement: true
     },
     tag_name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING, //makes this into a string
     }
   },
   {
