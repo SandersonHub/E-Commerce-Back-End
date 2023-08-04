@@ -6,22 +6,22 @@ const sequelize = require('../config/connection');
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
 
-// set up fields and rules for Product model
-Product.init(
+
+Product.init( //initializes the product model
   {
     // define columns
     id: {
-      type: DataTypes.INTEGER, // Example: for an auto-incrementing integer id
-      primaryKey: true,
-      autoIncrement: true,
-      allowNull: false,
+      type: DataTypes.INTEGER, //refers to data type ID
+      primaryKey: true, //sets the ID coluimn as the primary key
+      autoIncrement: true, //increments the ID
+      allowNull: false, //doesn't allow null
     },
     name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING, //refers to the type of data
       allowNull: false,
     },
-    price: {
-      type: DataTypes.DECIMAL(10, 2), // Example: for a price with up to 10 digits and 2 decimal places
+    price: { //indicates the price field
+      type: DataTypes.DECIMAL(10, 2), //10 is the total number digits and 2 is the number of decimal places
       allowNull: false,
     },
   },
@@ -37,4 +37,3 @@ Product.init(
 module.exports = Product;
 
 
-//add more comments

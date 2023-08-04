@@ -1,20 +1,20 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
-class Category extends Model {}
+class Category extends Model {} //
 
-Category.init(
+Category.init( //initializes the category model
   {
     // define columns
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      type: DataTypes.INTEGER, //refers to the type of data which is ID
+      allowNull: false, //doesn't allow null
+      primaryKey: true, //unique identifier for each row in the table
+      autoIncrement: true, //auto increments the ID
     },
-    category_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    category_name: { //sets the category name
+      type: DataTypes.STRING, //type of data is a string
+      allowNull: false, //doesn't allow null
     },
   },
   {
@@ -29,4 +29,3 @@ Category.init(
 module.exports = Category;
 
 
-//add comments
