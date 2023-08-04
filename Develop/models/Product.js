@@ -10,6 +10,20 @@ class Product extends Model {}
 Product.init(
   {
     // define columns
+    id: {
+      type: DataTypes.INTEGER, // Example: for an auto-incrementing integer id
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    price: {
+      type: DataTypes.DECIMAL(10, 2), // Example: for a price with up to 10 digits and 2 decimal places
+      allowNull: false,
+    },
   },
   {
     sequelize,
@@ -21,3 +35,6 @@ Product.init(
 );
 
 module.exports = Product;
+
+
+//add more comments

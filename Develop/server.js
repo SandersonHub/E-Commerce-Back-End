@@ -14,3 +14,6 @@ app.use(routes);
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
 });
+
+
+//do I need to add the sequelize connection here? ^^^^
