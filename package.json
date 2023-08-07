@@ -1,7 +1,7 @@
 {
   "name": "module-13-challenge-orm",
   "version": "1.0.0",
-  "description": "",
+  "description": "This application is called E-Commerce Back End\" that can be used on a back end of ecommerce business to store user data. ## Getting Started",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,8 +21,11 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.7"
+    "pg": "^8.11.2",
+    "req": "^0.1.4",
+    "sequelize": "^6.32.1",
+    "sequelize-cli": "^6.6.1"
   }
 }

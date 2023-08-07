@@ -25,6 +25,7 @@ https://github.com/SandersonHub/E-Commerce-Back-End
 * [Node](https://nodejs.org/en) - Backend
 * [Express](https://expressjs.com/) - Backend Framework
 * [MySQL](https://www.mysql.com/) - Backend
+* [Sequelize](https://sequelize.org/) - Backend
 
 ## Authors
 
@@ -43,5 +44,9 @@ https://github.com/SandersonHub/E-Commerce-Back-End
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
 
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete
+
+* https://sequelize.org/docs/v6/core-concepts/assocs/
+
+* https://sequelize.org/docs/v6/advanced-association-concepts/advanced-many-to-many/
 
 ## Feature Photos

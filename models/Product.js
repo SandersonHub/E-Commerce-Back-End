@@ -16,7 +16,7 @@ Product.init( //initializes the product model
       autoIncrement: true, //increments the ID
       allowNull: false, //doesn't allow null
     },
-    name: {
+    product_id: {
       type: DataTypes.STRING, //refers to the type of data
       allowNull: false,
     },

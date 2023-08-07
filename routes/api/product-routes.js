@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
+const Sequelize = require('sequelize');
+
 
 // The `/api/products` endpoint
 
@@ -74,7 +76,6 @@ router.post('/', async (req, res) => {
       stock,
     });
 
-
     //if tagIds is not null and has a length greater than 0
     if (tagIds && tagIds.length > 0) {
       //this below is the same as SELECT * FROM tag WHERE id = tagIds in sql
@@ -83,7 +84,6 @@ router.post('/', async (req, res) => {
       //adds tags to the product
       await product.addTags(tags);
     }
-
 
     //error checking, if catch is triggered, it will return status 500.
     return res.json(product);
@@ -94,8 +94,13 @@ router.post('/', async (req, res) => {
 });
 
 
-//eveything below is from the given code
 
+
+
+
+
+//eveything below is from the given code
+router.put('/:id', (req, res) => {
   Product.create(req.body)
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
@@ -116,6 +121,7 @@ router.post('/', async (req, res) => {
       console.log(err);
       res.status(400).json(err);
     });
+});    
 
 // update product
 router.put('/:id', (req, res) => {
