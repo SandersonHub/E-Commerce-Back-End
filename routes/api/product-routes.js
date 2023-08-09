@@ -66,7 +66,7 @@ router.post('/', async (req, res) => {
     //checks to make sure product_name, price, and stock are not null
     //if null it will return status 400
     if (!product_name && !price && !stock) {
-      return res.status(400).json({ error: 'product_name, price, and stock are all required fields. Please fill in accordingly.' });
+      return res.status(400).json({ error: 'Please fill in accordingly.' });
     }
 
     //taking the product_name, price, and stock from the req.body

@@ -18,14 +18,14 @@ onDelete: 'CASCADE', //if a category is deleted, any products are deleted as wel
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, { //the relationship between the product and the tag
   through: ProductTag, //goes through the product tag table, and brings the relationship together
-  AS: 'product_tags', //alias, reference to the product tag
+  as: 'product_tags', //alias, reference to the product tag
   foreignKey: 'product_id', //primary key of the product model
 });
 
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   through: ProductTag,
-  AS: 'product_tags',
+  as: 'product_tags',
   foreignKey: 'tag_id',
 });
 

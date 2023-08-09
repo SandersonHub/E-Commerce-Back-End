@@ -26,6 +26,3 @@ Tag.init(
 );
 
 module.exports = Tag;
-
-//OKAY
-//add notes

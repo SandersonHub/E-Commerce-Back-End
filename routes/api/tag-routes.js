@@ -4,16 +4,18 @@ const { Tag, Product, ProductTag } = require('../../models');
 // The `/api/tags` endpoint
 
 router.get('/', async (req, res) => {
+  console.log('inside tag route');
   // find all tags
   // be sure to include its associated Product data
   try { //try / catch block
     const tagInfo = await Tag.findAll({ //retruves all records from tag table
-      include: [{ model: Product, through: ProductTag, as: 'productTag_products'}]
+      include: [{ model: Product, through: ProductTag, as: 'product_tags'}]
     }); //finds all tags and includes any products with the tag
 
     //error checking
     res.status(200).json(tagInfo);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -28,7 +30,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Product data
   try {
     const tagInfo = await Tag.findByPk(req.params.id, { //finding all tags by their id
-      include: [{ model: Product, through: ProductTag, as: 'productTag_products'}]
+      include: [{ model: Product, through: ProductTag, as: 'product_tags'}]
     });
     //model: Product, tells sequelize to return the product model
     //through: ProductTag, tells sequelize to include any product tags
